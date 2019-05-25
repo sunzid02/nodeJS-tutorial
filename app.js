@@ -1,12 +1,5 @@
-function callFunction(fun) {
-    fun();
-}
+// import counter from './count';
 
+var counter = require('./count');
 
-// function expression
-var sayBye = function sayBye(params) {
-    console.log('Bye from another function');
-
-}
-
-callFunction(sayBye);
+console.log( counter(['zia', 'zayed']) );
