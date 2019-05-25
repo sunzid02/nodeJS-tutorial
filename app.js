@@ -1,5 +1,11 @@
 // import counter from './count';
 
-var counter = require('./count');
+var stuff = require('./stuff');
 
-console.log( counter(['zia', 'zayed']) );
+console.log( stuff.counter(['zia', 'zayed', 'zuna']) );
+console.log( stuff.adder(2,5) );
+console.log( stuff.adder( stuff.pi ,5) );
+
+
+
+
