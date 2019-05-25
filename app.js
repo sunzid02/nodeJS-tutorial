@@ -1,23 +1,12 @@
-console.log('welcome to node');
-
-// setTimeout(() => {
-//     console.log('3 secs have passed');  
-// }, 3000);
+function callFunction(fun) {
+    fun();
+}
 
 
-// var time = 0;
+// function expression
+var sayBye = function sayBye(params) {
+    console.log('Bye from another function');
 
-// var timer = setInterval(() => {
-    
-//     time += 2;
-//     console.log(time + ' have passed');    
+}
 
-//     if (time > 10) 
-//     {
-//         clearInterval(timer);
-//     }
-
-// }, 2000);
-
-console.log(__dirname);
-console.log(__filename);
+callFunction(sayBye);
