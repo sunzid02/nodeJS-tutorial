@@ -1,30 +1,36 @@
 
 var fs = require('fs');
 
-// syncnorize
-// var readMe = fs.readFileSync('readMe.txt', 'utf8');
+// // syncnorize
 
-// fs.writeFileSync('writeMe.txt', readMe);
+// //creating directory
+// fs.mkdirSync('stuff');
 
-
-
-// async
-// fs.readFile('readMe.txt', 'utf8', (err, data)=>{
-//     console.log(data);
-    
-// });
-
-// fs.readFile('readMe.txt', 'utf8', (err, data)=>{
-    
-//     fs.writeFile('writeMe5.txt', data, (err, data)=>{
-//         console.log('new file created');
-
-//     });
-
-// });
+// //removing directory
+// fs.rmdirSync('stuff');
 
 
-//delete a file
-fs.unlink('writeMe3.txt', ()=>{
-    console.log(' file deleted');
+// // async
+fs.mkdir('stuff', ()=>{
+    fs.readFile('readMe.txt', (err, data)=>{
+        fs.writeFile('./stuff/writeMe.txt', data, ()=>{
+            console.log('file write complete');
+            
+        });
+    });
 });
+
+
+// //empty the directory
+// fs.unlink('./stuff/writeMe.txt', ()=>{
+//     fs.rmdir('stuff', () => {
+//         console.log(' directory deleted');
+//     });
+// });
+
+
+
+// //delete a file
+// fs.unlink('writeMe5.txt', ()=>{
+//     console.log(' file deleted');
+// });
