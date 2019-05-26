@@ -14,16 +14,17 @@ var fs = require('fs');
     
 // });
 
-fs.readFile('readMe.txt', 'utf8', (err, data)=>{
+// fs.readFile('readMe.txt', 'utf8', (err, data)=>{
     
-    fs.writeFile('writeMe5.txt', data, (err, data)=>{
-        console.log('new file created');
+//     fs.writeFile('writeMe5.txt', data, (err, data)=>{
+//         console.log('new file created');
 
-    });
+//     });
 
+// });
+
+
+//delete a file
+fs.unlink('writeMe3.txt', ()=>{
+    console.log(' file deleted');
 });
-
-
-
-
-console.log('yo yo 2');
